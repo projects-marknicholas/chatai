@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    --black: #1d1c1a;
+    --white: #ffffff;
+    --grey: rgba(0,0,0,0.1);
+    --grey-text: #000000;
+    --btn: red;
+}
+body.dark {
+    --black: #ffffff;
+    --white: #1d1c1a;
+    --grey: rgba(255,255,255,0.1);
+    --grey-text: #ffffff;
+    --btn: blue;
+}
+body{
+  background-color: var(--white);
+}
+
+
+
+main{
+  width: 80%;
+  margin: auto;
+}
+main > nav{
+  padding: 20px;
+  display: flex;
+}
+main > nav > .left, main > nav > .right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > nav > .left, main > nav > .right > button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+main > nav > .right{
+  margin-left: auto;
+  margin-right: 0;
+}
+main > nav > .left > h1{
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: var(--black);
+}
+main > .return{
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+}
+main > .return > h1{
+  color: var(--black);
+  text-align: center;
+}
+main > .return > form{
+  margin-top: 20px;
+  display: flex;
+  word-break: break-word;
+}
+main > .return > form > input{
+  width: calc(90% - 30px);
+  padding: 15px;
+  outline: none;
+  border: none;
+  border: 1px solid var(--black);
+  font-family: outfit;
+}
+main > .return > form > button{
+  width: calc(15% - 30px);
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  padding: 5px 12px;
+  border: none;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 15px;
+  border: 1px solid var(--black);
+}
+.gen-text{
+  word-break: break-word;
+  width: calc(90% - 40px);
+  margin: auto;
+  margin-top: 30px;
+  background-color: var(--grey);
+  border-radius: 12px;
+  white-space: pre-wrap;
+  padding: 20px;
+}
+.gen-text > pre{
+  font-family: outfit;
+  color: var(--grey-text);
+  white-space: pre-wrap;   
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word; 
+  font-size: 1.1em;
+}
+.gen-text > h1{
+  color: var(--grey-text);
+  font-size: 1.5em;
+}
+span{
+  display: block;
+  margin-top: 30px;
+  color: var(--black);
+  margin-bottom: 30px;
+  text-align: center;
+}
+.send-ic{
+  height: 20px;
+}
+.toggle-ic{
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: brightness(0) saturate(100%) invert(62%) sepia(97%) saturate(2354%) hue-rotate(3deg) brightness(110%) contrast(102%);
+}
+.err{
+  color: #dc3545;
+}
+.sent{
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(61%) sepia(26%) saturate(7336%) hue-rotate(81deg) brightness(121%) contrast(123%);
+}
+.loading{
+  opacity: .1;
+}
+
+
+@media(max-width: 768px){
+  .gen-text > h1{
+    font-size: 1.2em;
+  }
+  main > .return > form > textarea{
+    width: calc(80% - 30px);
+    font-size: 1em;
+  }
+  main > .return > form{
+    display: flex;
+  }
+  main > .return > form > button{
+    margin: auto;
+    width: fit-content;
+  }
+  main{
+    width: 95%;
+  }
+}
